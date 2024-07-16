@@ -1,0 +1,42 @@
+body {
+  background: #303030;
+  cursor: url("./assets/open-hand.png") 20 5, auto;
+}
+body:active {
+  cursor: url("./assets/hand.png") 20 5, auto;
+}
+
+body:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  background-size: cover;
+  /* background-position: center; */
+  background-repeat: no-repeat;
+  background: url("./assets/wp2887694-marvel-wallpaper-1920x1080.jpg");
+  opacity: 0.6;
+  z-index: -1;
+  filter: blur(4px);
+  will-change: transform;
+}
+
+.card {
+  position: absolute;
+  perspective: 400px;
+  will-change: transform;
+  width: 300px;
+  left: calc(50% - 150px);
+  user-select: none;
+}
+
+.card-image {
+  transition: transform 0.1s ease-out;
+  display: block;
+  pointer-events: none;
+  width: 100%;
+  will-change: transform;
+  user-select: none;
+}
